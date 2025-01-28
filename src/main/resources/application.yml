@@ -1,0 +1,16 @@
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+  threads:
+    virtual:
+      enabled: true
+  task:
+    scheduling:
+      thread-name-prefix: myScheduler-
+#      shutdown:
+#        await-termination: true
+#    execution:
+#      thread-name-prefix: myTask-
+#  main:
+#    keep-alive: true
