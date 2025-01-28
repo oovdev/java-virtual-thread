@@ -1,0 +1,552 @@
+2664
+2025-01-25T04:15:48.207778900Z
+21.0.2+13-58
+
+#1 "main"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+      java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:756)
+      java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1126)
+      java.base/java.util.concurrent.CountDownLatch.await(CountDownLatch.java:276)
+      java.base/java.util.concurrent.ThreadPerTaskExecutor.awaitTermination(ThreadPerTaskExecutor.java:181)
+      java.base/java.util.concurrent.ThreadPerTaskExecutor.awaitTermination(ThreadPerTaskExecutor.java:195)
+      java.base/java.util.concurrent.ThreadPerTaskExecutor.close(ThreadPerTaskExecutor.java:212)
+      com.oovdev.purejava.VirtualThreadDump.taskExecutor(VirtualThreadDump.java:40)
+      com.oovdev.purejava.VirtualThreadDump.main(VirtualThreadDump.java:29)
+
+#9 "Reference Handler"
+      java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+      java.base/java.lang.ref.Reference.processPendingReferences(Reference.java:246)
+      java.base/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:208)
+
+#10 "Finalizer"
+      java.base/java.lang.Object.wait0(Native Method)
+      java.base/java.lang.Object.wait(Object.java:366)
+      java.base/java.lang.Object.wait(Object.java:339)
+      java.base/java.lang.ref.NativeReferenceQueue.await(NativeReferenceQueue.java:48)
+      java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:158)
+      java.base/java.lang.ref.NativeReferenceQueue.remove(NativeReferenceQueue.java:89)
+      java.base/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:173)
+
+#11 "Signal Dispatcher"
+
+#12 "Attach Listener"
+      java.base/java.lang.Thread.getStackTrace(Thread.java:2450)
+      java.base/jdk.internal.vm.ThreadDumper.dumpThread(ThreadDumper.java:165)
+      java.base/jdk.internal.vm.ThreadDumper.lambda$dumpThreads$0(ThreadDumper.java:158)
+      java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+      java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+      java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+      java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+      java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+      java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+      java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+      java.base/jdk.internal.vm.ThreadDumper.dumpThreads(ThreadDumper.java:158)
+      java.base/jdk.internal.vm.ThreadDumper.dumpThreads(ThreadDumper.java:154)
+      java.base/jdk.internal.vm.ThreadDumper.dumpThreadsToFile(ThreadDumper.java:119)
+      java.base/jdk.internal.vm.ThreadDumper.dumpThreads(ThreadDumper.java:68)
+
+#27 "Common-Cleaner"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+      java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+      java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+      java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+      java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+      java.base/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+      java.base/java.lang.Thread.run(Thread.java:1583)
+      java.base/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:186)
+
+#28 "Monitor Ctrl-Break"
+      java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+      java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:46)
+      java.base/sun.nio.ch.NioSocketImpl.tryRead(NioSocketImpl.java:256)
+      java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:307)
+      java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+      java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+      java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+      java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:329)
+      java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:372)
+      java.base/sun.nio.cs.StreamDecoder.lockedRead(StreamDecoder.java:215)
+      java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:169)
+      java.base/java.io.InputStreamReader.read(InputStreamReader.java:188)
+      java.base/java.io.BufferedReader.fill(BufferedReader.java:160)
+      java.base/java.io.BufferedReader.implReadLine(BufferedReader.java:370)
+      java.base/java.io.BufferedReader.readLine(BufferedReader.java:347)
+      java.base/java.io.BufferedReader.readLine(BufferedReader.java:436)
+      com.intellij.rt.execution.application.AppMainV2$1.run(AppMainV2.java:55)
+
+#29 "Notification Thread"
+
+#91 "RMI TCP Accept-0"
+      java.base/sun.nio.ch.Net.accept(Native Method)
+      java.base/sun.nio.ch.NioSocketImpl.accept(NioSocketImpl.java:748)
+      java.base/java.net.ServerSocket.implAccept(ServerSocket.java:698)
+      java.base/java.net.ServerSocket.platformImplAccept(ServerSocket.java:663)
+      java.base/java.net.ServerSocket.implAccept(ServerSocket.java:639)
+      java.base/java.net.ServerSocket.implAccept(ServerSocket.java:585)
+      java.base/java.net.ServerSocket.accept(ServerSocket.java:543)
+      jdk.management.agent/sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:52)
+      java.rmi/sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:424)
+      java.rmi/sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:388)
+      java.base/java.lang.Thread.run(Thread.java:1583)
+
+#94 "JMX server connection timeout 94"
+      java.base/java.lang.Object.wait0(Native Method)
+      java.base/java.lang.Object.wait(Object.java:366)
+      java.management/com.sun.jmx.remote.internal.ServerCommunicatorAdmin$Timeout.run(ServerCommunicatorAdmin.java:171)
+      java.base/java.lang.Thread.run(Thread.java:1583)
+
+#32 "ForkJoinPool-1-worker-1"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+      java.base/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+      java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+      java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+#57 "ForkJoinPool-1-worker-2"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+      java.base/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+      java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+      java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+#66 "ForkJoinPool-1-worker-3"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+      java.base/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+      java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+      java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+#67 "ForkJoinPool-1-worker-4"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+      java.base/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+      java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+      java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+#68 "ForkJoinPool-1-worker-5"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+      java.base/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+      java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+      java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+#69 "ForkJoinPool-1-worker-6"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+      java.base/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+      java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+      java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+#70 "ForkJoinPool-1-worker-7"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+      java.base/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+      java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+      java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+#71 "ForkJoinPool-1-worker-8"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+      java.base/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+      java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+      java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+#72 "ForkJoinPool-1-worker-9"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+      java.base/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+      java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+      java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+#73 "ForkJoinPool-1-worker-10"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:449)
+      java.base/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1891)
+      java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+      java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+#74 "ForkJoinPool-1-worker-11"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+      java.base/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+      java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+      java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+#75 "ForkJoinPool-1-worker-12"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+      java.base/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+      java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+      java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+#76 "ForkJoinPool-1-worker-13"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+      java.base/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+      java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+      java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+#78 "ForkJoinPool-1-worker-15"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+      java.base/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+      java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+      java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+#77 "ForkJoinPool-1-worker-14"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+      java.base/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+      java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+      java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+#79 "ForkJoinPool-1-worker-16"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:449)
+      java.base/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1891)
+      java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+      java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+#92 "RMI TCP Connection(1)-192.168.0.19"
+      java.base/sun.nio.ch.Net.poll(Native Method)
+      java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:191)
+      java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:280)
+      java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+      java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+      java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+      java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+      java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:291)
+      java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:325)
+      java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:312)
+      java.base/java.io.FilterInputStream.read(FilterInputStream.java:71)
+      java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:580)
+      java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844)
+      java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721)
+      java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+      java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720)
+      java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+      java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+      java.base/java.lang.Thread.run(Thread.java:1583)
+
+#80 "VirtualThread-unparker"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+      java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+      java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+      java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+      java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+      java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+      java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+      java.base/java.lang.Thread.run(Thread.java:1583)
+      java.base/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:186)
+
+#64 "myVirtual-31" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#65 "myVirtual-32" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#31 "myVirtual-0" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#33 "myVirtual-1" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#34 "myVirtual-2" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#35 "myVirtual-3" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#36 "myVirtual-4" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#37 "myVirtual-5" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#38 "myVirtual-6" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#39 "myVirtual-7" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#40 "myVirtual-8" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#41 "myVirtual-9" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#42 "myVirtual-10" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#43 "myVirtual-11" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#44 "myVirtual-12" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#45 "myVirtual-13" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#46 "myVirtual-14" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#47 "myVirtual-15" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#48 "myVirtual-16" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#49 "myVirtual-17" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#50 "myVirtual-18" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#51 "myVirtual-19" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#52 "myVirtual-20" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#53 "myVirtual-21" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#54 "myVirtual-22" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#55 "myVirtual-23" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#56 "myVirtual-24" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#58 "myVirtual-25" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#59 "myVirtual-26" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#60 "myVirtual-27" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#61 "myVirtual-28" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#62 "myVirtual-29" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#63 "myVirtual-30" virtual
+      java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:621)
+      java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:791)
+      java.base/java.lang.Thread.sleep(Thread.java:507)
+      com.oovdev.purejava.VirtualThreadDump$1.run(VirtualThreadDump.java:18)
+      java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+      java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+
+#93 "RMI Scheduler(0)"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+      java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+      java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+      java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+      java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+      java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+      java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+      java.base/java.lang.Thread.run(Thread.java:1583)
+
