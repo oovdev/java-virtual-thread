@@ -1,7 +1,5 @@
 # create virtual thread
 
----
-
 ```java
 Thread thread = Thread.ofVirtual().name("myVirtual").start(runnable);
 ```
@@ -13,8 +11,6 @@ thread.start();
 
 # create virutal thread using ExecutorService
 
----
-
 ```java
 ThreadFactory factory = Thread.ofVirtual().name("myVirtual-", 0).factory();
 try (ExecutorService executorService = Executors.newThreadPerTaskExecutor(factory)) {
@@ -25,8 +21,6 @@ try (ExecutorService executorService = Executors.newThreadPerTaskExecutor(factor
 ```
 
 # pinning
-
----
 
 ```java
 private final Runnable runnable = new Runnable() {
@@ -47,15 +41,11 @@ private final Runnable runnable = new Runnable() {
 
 # detect pinning
 
----
-
 ```
 -Djdk.tracePinnedThreads=full or -Djdk.tracePinnedThreads=short
 ```
 
 # ReentrantLock
-
----
 
 ```java
 private final ReentrantLock lock = new ReentrantLock();
@@ -119,7 +109,6 @@ spring:
 ```
 
 # reference
----
 
 https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html
 
