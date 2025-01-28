@@ -46,7 +46,7 @@ public class PerformanceTest {
          - IO bound 작업: Virtual thread 성능이 우수
          - sleep이나 blocking 시 unmount 돼서 효율 높임
         */
-//        platformThreadWithIoBound(20000); // if count == 20000: 11.5s
+        platformThreadWithIoBound(20000); // if count == 20000: 11.5s
 //        virtualThreadWithIoBound(20000); // if count == 20000: 6.6s
 
         /*
